@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+<head>
+  <meta charset="UTF-8">
+  <title>Offline Jira Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js"></script>
+</head>
+<body>
+  <h1>Offline Jira Form</h1>
+  <form id="jira-form">
+    <label for="project">Project:</label>
+    <select id="project" name="project">
+      <option value="ONDA2">DA2 Oncall (ONDA2)</option>
+    </select>
+
+    <label for="issue-type">Issue Type:</label>
+    <select id="issue-type" name="issue-type">
+      <option value="problem-report">Problem Report</option>
+    </select>
+
+    <label for="summary">Summary:</label>
+    <input id="summary" name="summary" type="text" maxlength="60">
+
+    <label for="components">Components:</label>
+    <select id="components" name="components">
+      <option value="operations">Operations</option>
+    </select>
+
+    <label for="rig-type">Rig Type:</label>
+    <select id="rig-type" name="rig-type">
+      <option value="alta-x">Alta X</option>
+      <option value="mk36">MK36</option>
+      <option value="mk37">MK37</option>
+      <option value="mk38">MK38</option>
+      <option value="selfie-stick">Selfie Stick</option>
+      <option value="vsl">VSL</option>
+      <option value="vu-rig">VU Rig</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="rig-id">Rig ID:</label>
+    <input id="rig-id" name="rig-id" type="text" maxlength="100">
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="4" maxlength="1000"></textarea>
+
+    <label for="priority">Priority:</label>
+    <select id="priority" name="priority">
+      <option value="low">Low</option>
+      <option value="med">Med</option>
+      <option value="high">High</option>
+      <option value="routine">Routine</option>
+    </select>
+
+    <label for="environment">Environment:</label>
+    <textarea id="environment" name="environment" rows="4" maxlength="1000"></textarea>
+
+    <label for="attachments">Attachments:</label>
+    <input id="attachments" name="attachments" type="file" multiple>
+    
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    // Add your JavaScript code in "app.js" file to handle form submission, save data locally, and sync with Jira API when online.
+  </script>
+</body>
+</html>
